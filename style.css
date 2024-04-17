@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+/* to mainContainer and body*/
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: hsl(214, 47%, 23%);
+}
+
+/* to header */
+.header {
+  display: flex;
+  gap: 65%;
+  color: bisque;
+  border: 2px solid hsl(217, 16%, 45%);
+  margin-top: 30px;
+  width: 50%;
+  margin-left: 350px;
+  border-radius: 10px;
+  padding: 15px;
+}
+.Name {
+  font-size: 25px;
+}
+.Score {
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+  width: 20%;
+  text-align: center;
+  padding-top: 13px;
+  border-radius: 10px;
+}
+.ScoreNumber {
+  font-size: 35px;
+}
+
+/* top play round */
+.PlaySection{
+    background-image: url(./images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 315px;
+    margin-top: 130px;
+    margin-left: 530px;
+}
+.imgOfpaperdiv{
+    text-align: center;
+    border: 15px solid hsl(230, 89%, 65%);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    padding-top:30px ;
+    background-color: #ffffff;
+    position: absolute;
+    left: 470px;
+    top: 220px;
+}
+.imgOfRock{
+    text-align: center;
+    border: 15px solid hsl(349, 70%, 56%);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    padding-top:38px ;
+    background-color: #ffffff;
+    position: absolute;
+    left: 615px;
+    top: 440px;
+}
+.imgOfScissors{
+    text-align: center;
+    border: 15px solid hsl(40, 84%, 53%);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    padding-top:38px ;
+    background-color: #ffffff;
+    position: absolute;
+    left: 750px;
+    top: 220px;
+}
+/* to coder name and Rules butoon*/
+.RuleAndCoder{
+    display: flex;
+    gap: 70%;
+    justify-content: center;
+    align-items: center;
+}
+.rulesBtn{
+    margin-bottom: 10px;
+    width: 7%;
+    padding: 8px;
+    border-radius: 7px;
+    border: none;
+  background-color: hsl(213, 64%, 9%);
+  border: 1px solid whitesmoke;
+  color: #ffffff;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: left;
+  color: aliceblue;
+}
+.attribution a {
+  color: hsl(230, 8%, 85%);
+}
+
+/* to popUp button */
+.RulesPopUp{
+    background-color: #ffffff;
+    width: 28%;
+    height: 396px;
+    position: absolute;
+    top: 128px;
+    padding: 20px;
+    left: 496px;
+    text-align: center;
+    border-radius: 8px;
+}
+.nameRule{
+    color: rgb(31, 28, 28);
+}
+.nameAndClose{
+    padding-top: 10px;
+    display: flex;
+    gap: 75%;
+    margin-bottom: 40px;
+}
+.closeBtn{
+    width: 20px;
+    height: 18px;
+}

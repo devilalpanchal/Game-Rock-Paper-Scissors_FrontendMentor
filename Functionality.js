@@ -1,18 +1,31 @@
 // const { useState, useEffect } = require("react")
 
 // to popUp Button for Rules
-const rulesBtn = document.querySelector(".rulesBtn");
+const popupBtn = document.querySelector(".popupBtn");
 const RulesPopUp = document.querySelector(".RulesPopUp");
 const closeBtn = document.querySelector(".closeBtn");
+const resetLocalStorage = document.querySelector(".resetLocalStorage");
 
-rulesBtn.addEventListener("click", () => {
-  RulesPopUp.classList.toggle("hide");
+popupBtn.addEventListener("click", () => {
+    RulesPopUp.classList.toggle("hide");
 });
 
 closeBtn.addEventListener("click", () => {
-  RulesPopUp.classList.toggle("hide");
+    RulesPopUp.classList.toggle("hide");
 });
 
+// to score result
+const ScoreNumber = document.querySelector('.ScoreNumber')
+let count = localStorage.getItem('count') ? parseInt(localStorage.getItem('count')) : 0;
+ScoreNumber.innerHTML = count
+// to clear local Storage
+resetLocalStorage.addEventListener('click', () => {
+    localStorage.clear();
+    count = 0;
+    ScoreNumber.innerHTML = count
+    console.log('first')
+
+})
 // to Face game
 const paper = document.querySelector(".imgOfpaperdiv");
 const rock = document.querySelector(".imgOfRock");
@@ -22,6 +35,7 @@ const PlaySection = document.querySelector(".PlaySection");
 const randomImage = document.querySelector(".randomImage");
 const otherImgRandom = document.querySelector(".otherImgRandom");
 const playAgain = document.querySelector(".playAgain");
+const Result = document.querySelector(".Result");
 
 let array = [];
 array[0] = `<div class="imgOfpaper"><img src="./images/icon-paper.svg" alt="" /></div>`;
@@ -29,43 +43,115 @@ array[1] = `<div class="imgOfRo"><img src="./images/icon-rock.svg" alt="" /></di
 array[2] = `<div class="imgOfSci"><img src="./images/icon-scissors.svg" alt="" /></div>`;
 
 paper.addEventListener("click", () => {
-  console.log("paper");
-  FaceGAme.classList.toggle("hide");
-  PlaySection.classList.toggle("hide");
-  randomImage.innerHTML = array[0];
-  randomValue();
+
+    FaceGAme.classList.toggle("hide");
+
+    PlaySection.classList.toggle("hide");
+    randomImage.innerHTML = array[0];
+    setTimeout(() => {
+        randomValue();
+        if (array[0] === array[random]) {
+            Result.innerHTML = 'ITS A DRAW'
+            ScoreNumber.innerHTML = count;
+            localStorage.setItem('count', count);
+        } else if (array[1] === array[random]) {
+            Result.innerHTML = 'YOU WIN'
+            count++
+            ScoreNumber.innerHTML = count;
+            localStorage.setItem('count', count);
+        } else {
+            Result.innerHTML = 'YOU LOSE'
+            count--
+            ScoreNumber.innerHTML = count;
+            localStorage.setItem('count', count);
+        }
+        playAgain.classList.toggle('hide')
+    }, 3000);
+
 });
 rock.addEventListener("click", () => {
-  console.log("paper");
-  FaceGAme.classList.toggle("hide");
-  PlaySection.classList.toggle("hide");
-  randomImage.innerHTML = array[1];
-  randomValue();
+    FaceGAme.classList.toggle("hide");
+    PlaySection.classList.toggle("hide");
+    randomImage.innerHTML = array[1];
+    randomValue();
+    if (array[1] === array[random]) {
+        Result.innerHTML = 'ITS A DRAW'
+        ScoreNumber.innerHTML = count;
+        localStorage.setItem('count', count);
+
+    } else if (array[2] === array[random]) {
+        count++
+        ScoreNumber.innerHTML = count;
+        localStorage.setItem('count', count);
+    } else {
+        Result.innerHTML = 'YOU LOSE'
+        count--
+        ScoreNumber.innerHTML = count;
+        localStorage.setItem('count', count);
+
+    }
 });
 scissors.addEventListener("click", () => {
-  console.log("paper");
-  FaceGAme.classList.toggle("hide");
-  PlaySection.classList.toggle("hide");
-  randomImage.innerHTML = array[2];
-  randomValue();
+    FaceGAme.classList.toggle("hide");
+    PlaySection.classList.toggle("hide");
+    randomImage.innerHTML = array[2];
+    randomValue();
+    if (array[2] === array[random]) {
+        Result.innerHTML = 'ITS A DRAW'
+        Result.innerHTML = 'YOU WIN'
+        ScoreNumber.innerHTML = count;
+        localStorage.setItem('count', count);
+
+    } else if (array[0] === array[random]) {
+        Result.innerHTML = 'YOU WIN'
+        count++
+        ScoreNumber.innerHTML = count;
+        localStorage.setItem('count', count);
+
+    } else {
+        Result.innerHTML = 'YOU LOSE'
+        count--
+        ScoreNumber.innerHTML = count;
+        localStorage.setItem('count', count);
+
+    }
 });
 
 let arrayOrrandom = [];
 arrayOrrandom[0] = `<div class="imgOfpaper"><img src="./images/icon-paper.svg" alt="" /></div>`;
 arrayOrrandom[1] = `<div class="imgOfRo"><img src="./images/icon-rock.svg" alt="" /></div>`;
 arrayOrrandom[2] = `<div class="imgOfSci"><img src="./images/icon-scissors.svg" alt="" /></div>`;
+let random;
 function randomValue() {
-  let random = Math.floor(
-    Math.random(arrayOrrandom.length) * arrayOrrandom.length
-  );
-  otherImgRandom.innerHTML = arrayOrrandom[random];
+    random = Math.floor(
+        Math.random(arrayOrrandom.length) * arrayOrrandom.length
+    );
+    otherImgRandom.innerHTML = arrayOrrandom[random];
 }
 
 
 // to back button like play Again
-playAgain.addEventListener('click',()=>{
-    document.location.reload()
+playAgain.addEventListener('click', () => {
+    // document.location.reload()
+    FaceGAme.classList.toggle("hide");
+    PlaySection.classList.toggle("hide");
 })
+
+// to reset button
+setTimeout(() => {
+    resetLocalStorage.classList.toggle('hide')
+}, 1000);
+
+
+// if (condition1) {
+//     //  block of code to be executed if condition1 is true
+//   } else if (condition2) {
+//     //  block of code to be executed if the condition1 is false and condition2 is true
+//   } else {
+//     //  block of code to be executed if the condition1 is false and condition2 is false
+//   }
+
+
 // function name() {
 
 //     const [count,setcount] = useState(0)

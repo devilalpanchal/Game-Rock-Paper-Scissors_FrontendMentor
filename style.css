@@ -3,11 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
-.hide{
-    display: none;
+.hide {
+  display: none;
 }
-.show{
-    display: block;
+.show {
+  display: block;
 }
 /* to mainContainer and body*/
 body {
@@ -20,7 +20,7 @@ body {
 /* to header */
 .header {
   display: flex;
-  gap: 65%;
+  gap: 54%;
   color: bisque;
   border: 2px solid hsl(217, 16%, 45%);
   margin-top: 30px;
@@ -30,7 +30,7 @@ body {
   padding: 15px;
 }
 .Name {
-  font-size: 25px;
+  margin-top: 6px;
 }
 .Score {
   border: 1px solid white;
@@ -45,76 +45,79 @@ body {
   font-size: 35px;
 }
 /* mainGameZone */
-.mainGameZone{
+.mainGameZone {
   width: 100%;
   height: 40%;
 }
-.nameOfPicked{
+.nameOfPicked {
   display: flex;
   gap: 120px;
   align-items: center;
   justify-content: center;
   font-size: 20px;
   color: #ffffff;
-  /* border: 1px solid blue; */
   padding: 30px;
   margin-top: 80px;
 }
-.FaceGAme{
+.FaceGAme {
   margin-left: 30px;
   text-align: center;
-  /* width: 50%; */
-  height: 360px;
-  /* border: 1px solid red; */
+  height: 330px;
 }
-.imgOfmaingame{
+.imgOfmaingame {
   text-align: center;
   border: 15px solid hsl(349, 70%, 56%);
   border-radius: 50%;
   width: 150px;
   padding: 20px;
-  padding-top:38px ;
+  padding-top: 38px;
   background-color: #ffffff;
 }
-.imgandyouPic,.imgandOtherPic{
+.imgandyouPic,
+.imgandOtherPic {
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
-.imgOfpaper{
+.imgOfpaper {
   text-align: center;
   border: 15px solid hsl(230, 89%, 65%);
   border-radius: 50%;
   width: 150px;
   height: 150px;
   padding: 20px;
-  padding-top:30px ;
+  padding-top: 30px;
   background-color: #ffffff;
 }
-.imgOfRo{
+.imgOfRo {
   text-align: center;
   border: 15px solid hsl(349, 70%, 56%);
   border-radius: 50%;
   width: 150px;
   height: 150px;
   padding: 20px;
-  padding-top:38px ;
+  padding-top: 38px;
   background-color: #ffffff;
 }
-.imgOfSci{
+.imgOfSci {
   text-align: center;
   border: 15px solid hsl(40, 84%, 53%);
   border-radius: 50%;
   width: 150px;
   height: 150px;
   padding: 20px;
-  padding-top:38px ;
+  padding-top: 38px;
   background-color: #ffffff;
 }
-.Result{
+.Result {
   font-size: 35px;
 }
-.playAgain{
+.ResultAndAgain {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.playAgain {
   width: 200px;
   padding: 13px;
   border-radius: 10px;
@@ -122,83 +125,93 @@ body {
   letter-spacing: 1px;
   font-size: 16px;
 }
-.playAgain:hover{
- color: red;
- background-color: #dad3d3;
+.playAgain:hover {
+  color: red;
+  background-color: #dad3d3;
 }
 /* top play round */
-.PlaySection{
-    width: 40%;
-    height: 430px;
+.PlaySection {
+  width: 40%;
+  height: 410px;
   margin-left: 410px;
-  padding-top:110px ;
+  padding-top: 125px;
   padding-left: 120px;
 }
-.BackgroundTranigle{
-    background-image: url(./images/bg-triangle.svg);
-    background-repeat: no-repeat;
-    width: 70%;
-    height: 70%;
+.BackgroundTranigle {
+  background-image: url(./images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  width: 70%;
+  height: 80%;
 }
 
-.imgOfpaperdiv{
-    text-align: center;
-    border: 15px solid hsl(230, 89%, 65%);
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    padding: 20px;
-    padding-top:30px ;
-    background-color: #ffffff;
-    position: absolute;
-    left: 470px;
-    top: 220px;
+.imgOfpaperdiv {
+  text-align: center;
+  border: 15px solid hsl(230, 89%, 65%);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  padding-top: 30px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 470px;
+  top: 220px;
 }
-.imgOfRock{
-    text-align: center;
-    border: 15px solid hsl(349, 70%, 56%);
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    padding: 20px;
-    padding-top:38px ;
-    background-color: #ffffff;
-    position: absolute;
-    left: 615px;
-    top: 440px;
+.imgOfRock {
+  text-align: center;
+  border: 15px solid hsl(349, 70%, 56%);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  padding-top: 38px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 615px;
+  top: 440px;
 }
-.imgOfScissors{
-    text-align: center;
-    border: 15px solid hsl(40, 84%, 53%);
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    padding: 20px;
-    padding-top:38px ;
-    background-color: #ffffff;
-    position: absolute;
-    left: 750px;
-    top: 220px;
+.imgOfScissors {
+  text-align: center;
+  border: 15px solid hsl(40, 84%, 53%);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  padding-top: 38px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 750px;
+  top: 220px;
 }
 /* to coder name and Rules butoon*/
-.RuleAndCoder{
-    display: flex;
-    gap: 70%;
-    justify-content: center;
-    align-items: center;
+.RuleAndCoder {
+  display: flex;
+  gap: 57%;
+  justify-content: center;
+  align-items: center;
 }
-.rulesBtn{
-    margin-bottom: 10px;
-    width: 7%;
-    padding: 8px;
-    border-radius: 7px;
-    border: none;
-  background-color: hsl(213, 64%, 9%);
+.resetAndRule {
+  width: 20%;
+
+  display: flex;
+  gap: 15px;
+}
+.rulesBtn {
+  margin-bottom: 10px;
+  width: 50%;
+  padding: 12px;
+  border-radius: 7px;
+  border: none;
+  font-size: 18px;
+  background-color: hsl(214, 47%, 23%);
   border: 1px solid whitesmoke;
   color: #ffffff;
 }
-
+.rulesBtn:hover {
+  background-color: hsl(214, 41%, 32%);
+}
 .attribution {
+  margin-top: 40px;
   font-size: 11px;
   text-align: left;
   color: aliceblue;
@@ -208,27 +221,36 @@ body {
 }
 
 /* to popUp button */
-.RulesPopUp{
-    background-color: #ffffff;
-    width: 28%;
-    height: 396px;
-    position: absolute;
-    top: 128px;
-    padding: 20px;
-    left: 496px;
-    text-align: center;
-    border-radius: 8px;
+.RulesPopUp {
+  background-color: #ffffff;
+  width: 28%;
+  height: 396px;
+  position: absolute;
+  top: 150px;
+  padding: 20px;
+  left: 496px;
+  text-align: center;
+  border-radius: 8px;
 }
-.nameRule{
-    color: rgb(31, 28, 28);
+.nameRule {
+  color: rgb(31, 28, 28);
 }
-.nameAndClose{
-    padding-top: 10px;
-    display: flex;
-    gap: 75%;
-    margin-bottom: 40px;
+.nameAndClose {
+  padding-top: 10px;
+  display: flex;
+  gap: 75%;
+  margin-bottom: 40px;
 }
-.closeBtn{
-    width: 20px;
-    height: 18px;
+.closeBtn {
+  width: 20px;
+  height: 18px;
+}
+
+/* to jump circle */
+.jumpCircle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: black;
+  border: 10px solid rgb(65, 62, 62);
 }

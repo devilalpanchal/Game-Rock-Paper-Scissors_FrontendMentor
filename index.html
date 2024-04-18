@@ -19,10 +19,6 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Manrope:wght@200..800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <!-- 
-  You Win
-  You Lose
-  Play Again -->
   </head>
 
   <body>
@@ -30,13 +26,11 @@
       <!-- header -->
       <header class="header">
         <div class="Name">
-          <p>ROCK</p>
-          <p>PAPER</p>
-          <p>SCISSORS</p>
+          <img src="./images/logo.svg" alt="" />
         </div>
         <div class="Score">
           <p>SCORE</p>
-          <h1 class="ScoreNumber">12</h1>
+          <h1 class="ScoreNumber"></h1>
         </div>
       </header>
 
@@ -64,12 +58,16 @@
               <div class="randomImage"></div>
             </div>
             <div class="ResultAndAgain">
-              <h1 class="Result">YOU WIN</h1>
-              <button class="playAgain">PLAY AGAIN</button>
+              <h1 class="Result"></h1>
+              <button class="playAgain hide">PLAY AGAIN</button>
             </div>
             <div class="imgandOtherPic">
               <p class="OtherPiked">THE HOUSE PICKED</p>
-              <div class="otherImgRandom"></div>
+              <div class="otherImgRandom">
+                <div class="jumper">
+                  <div class="jumpCircle"></div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="GameChanger"></div>
@@ -85,7 +83,10 @@
           >. Coded by
           <a href="https://linktr.ee/devilalpanchal">Developer Devid</a>.
         </div>
-        <button class="rulesBtn">RULES</button>
+        <div class="resetAndRule">
+          <button class="rulesBtn resetLocalStorage hide">RESET</button>
+          <button class="rulesBtn popupBtn">RULES</button>
+        </div>
       </div>
       <!-- to popUp button for Rules Which Is hided -->
       <section class="RulesPopUp hide">

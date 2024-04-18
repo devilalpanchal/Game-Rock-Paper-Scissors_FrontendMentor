@@ -44,16 +44,32 @@ body {
 .ScoreNumber {
   font-size: 35px;
 }
-
+/* mainGameZone */
+.mainGameZone{
+  width: 100%;
+  height: 40%;
+}
+.FaceGAme{
+  margin-left: 350px;
+  text-align: center;
+  width: 50%;
+  height: 430px;
+}
 /* top play round */
 .PlaySection{
+    width: 40%;
+    height: 430px;
+  margin-left: 410px;
+  padding-top:110px ;
+  padding-left: 120px;
+}
+.BackgroundTranigle{
     background-image: url(./images/bg-triangle.svg);
     background-repeat: no-repeat;
-    width: 50%;
-    height: 315px;
-    margin-top: 130px;
-    margin-left: 530px;
+    width: 70%;
+    height: 70%;
 }
+
 .imgOfpaperdiv{
     text-align: center;
     border: 15px solid hsl(230, 89%, 65%);

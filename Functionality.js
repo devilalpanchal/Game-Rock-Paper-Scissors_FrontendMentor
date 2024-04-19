@@ -36,16 +36,19 @@ const randomImage = document.querySelector(".randomImage");
 const otherImgRandom = document.querySelector(".otherImgRandom");
 const playAgain = document.querySelector(".playAgain");
 const Result = document.querySelector(".Result");
-
+// console.log(Result)
+const firstlineborder = document.querySelector('.firstlineborder')
 let array = [];
-array[0] = `<div class="imgOfpaper"><img src="./images/icon-paper.svg" alt="" /></div>`;
+array[0] = `<div class="imgOfpaper"><img class='images' src="./images/icon-paper.svg" alt="" /></div>`;
 array[1] = `<div class="imgOfRo"><img src="./images/icon-rock.svg" alt="" /></div>`;
 array[2] = `<div class="imgOfSci"><img src="./images/icon-scissors.svg" alt="" /></div>`;
 
+
+
+let mayank = `<div class="secondBorder"><div class='thirdBorder'><div class="imgOfpaper"><img class='images' src="./images/icon-paper.svg" alt="" /></div></div></div>`;
+
 paper.addEventListener("click", () => {
-
     FaceGAme.classList.toggle("hide");
-
     PlaySection.classList.toggle("hide");
     randomImage.innerHTML = array[0];
     setTimeout(() => {
@@ -59,13 +62,18 @@ paper.addEventListener("click", () => {
             count++
             ScoreNumber.innerHTML = count;
             localStorage.setItem('count', count);
+            let mayank = `<div class='thirdBorder'><div class="secondBorder"><div class='firstline'><div class="imgOfpaper"><img class='images' src="./images/icon-paper.svg" alt="" /></div></div></div></div>`;
+            randomImage.innerHTML = mayank;
+
         } else {
             Result.innerHTML = 'YOU LOSE'
             count--
             ScoreNumber.innerHTML = count;
+            let mayank = `<div class='thirdBorder'><div class="secondBorder"><div class='firstline'>${array[random]}</div></div></div>`;
+            otherImgRandom.innerHTML = mayank;
             localStorage.setItem('count', count);
         }
-        playAgain.classList.toggle('hide')
+        playAgain.classList.remove('hide')
     }, 3000);
 
 });
@@ -73,48 +81,67 @@ rock.addEventListener("click", () => {
     FaceGAme.classList.toggle("hide");
     PlaySection.classList.toggle("hide");
     randomImage.innerHTML = array[1];
-    randomValue();
-    if (array[1] === array[random]) {
-        Result.innerHTML = 'ITS A DRAW'
-        ScoreNumber.innerHTML = count;
-        localStorage.setItem('count', count);
 
-    } else if (array[2] === array[random]) {
-        count++
-        ScoreNumber.innerHTML = count;
-        localStorage.setItem('count', count);
-    } else {
-        Result.innerHTML = 'YOU LOSE'
-        count--
-        ScoreNumber.innerHTML = count;
-        localStorage.setItem('count', count);
+    setTimeout(() => {
 
-    }
+        randomValue();
+        if (array[1] === array[random]) {
+            Result.innerHTML = 'ITS A DRAW'
+            ScoreNumber.innerHTML = count;
+            localStorage.setItem('count', count);
+
+        } else if (array[2] === array[random]) {
+            Result.innerHTML = 'YOU WIN'
+            console.log(randomImage)
+            count++
+            ScoreNumber.innerHTML = count;
+            localStorage.setItem('count', count);
+            let mayank = `<div class='thirdBorder'><div class="secondBorder"><div class='firstline'><div class="imgOfRo"><img src="./images/icon-rock.svg" alt="" /></div></div></div></div>`;
+            randomImage.innerHTML = mayank;
+        } else {
+            Result.innerHTML = 'YOU LOSE'
+            count--
+            ScoreNumber.innerHTML = count;
+            localStorage.setItem('count', count);
+            let mayank = `<div class='thirdBorder'><div class="secondBorder"><div class='firstline'>${array[random]}</div></div></div>`;
+            otherImgRandom.innerHTML = mayank;
+        }
+        playAgain.classList.remove('hide')
+
+    }, 3000);
+
 });
 scissors.addEventListener("click", () => {
     FaceGAme.classList.toggle("hide");
     PlaySection.classList.toggle("hide");
     randomImage.innerHTML = array[2];
-    randomValue();
-    if (array[2] === array[random]) {
-        Result.innerHTML = 'ITS A DRAW'
-        Result.innerHTML = 'YOU WIN'
-        ScoreNumber.innerHTML = count;
-        localStorage.setItem('count', count);
+    setTimeout(() => {
+        randomValue();
+        if (array[2] === array[random]) {
+            Result.innerHTML = 'ITS A DRAW'
+            ScoreNumber.innerHTML = count;
+            localStorage.setItem('count', count);
 
-    } else if (array[0] === array[random]) {
-        Result.innerHTML = 'YOU WIN'
-        count++
-        ScoreNumber.innerHTML = count;
-        localStorage.setItem('count', count);
+        } else if (array[0] === array[random]) {
+            Result.innerHTML = 'YOU WIN'
+            count++
+            ScoreNumber.innerHTML = count;
+            localStorage.setItem('count', count);
+            let mayank = `<div class='thirdBorder'><div class="secondBorder"><div class='firstline'><div class="imgOfSci"><img src="./images/icon-scissors.svg" alt="" /></div></div></div></div>`;
+            randomImage.innerHTML = mayank;
 
-    } else {
-        Result.innerHTML = 'YOU LOSE'
-        count--
-        ScoreNumber.innerHTML = count;
-        localStorage.setItem('count', count);
+        } else {
+            Result.innerHTML = 'YOU LOSE'
+            count--
+            ScoreNumber.innerHTML = count;
+            localStorage.setItem('count', count);
+            let mayank = `<div class='thirdBorder'><div class="secondBorder"><div class='firstline'>${array[random]}</div></div></div>`;
+            otherImgRandom.innerHTML = mayank;
 
-    }
+        }
+        playAgain.classList.remove('hide')
+    }, 3000);
+
 });
 
 let arrayOrrandom = [];
@@ -128,11 +155,9 @@ function randomValue() {
     );
     otherImgRandom.innerHTML = arrayOrrandom[random];
 }
-
-
 // to back button like play Again
 playAgain.addEventListener('click', () => {
-    // document.location.reload()
+    document.location.reload()
     FaceGAme.classList.toggle("hide");
     PlaySection.classList.toggle("hide");
 })
@@ -140,7 +165,7 @@ playAgain.addEventListener('click', () => {
 // to reset button
 setTimeout(() => {
     resetLocalStorage.classList.toggle('hide')
-}, 1000);
+}, 5000);
 
 
 // if (condition1) {

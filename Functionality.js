@@ -1,4 +1,3 @@
-// const { useState, useEffect } = require("react")
 
 // to popUp Button for Rules
 const popupBtn = document.querySelector(".popupBtn");
@@ -36,7 +35,6 @@ const randomImage = document.querySelector(".randomImage");
 const otherImgRandom = document.querySelector(".otherImgRandom");
 const playAgain = document.querySelector(".playAgain");
 const Result = document.querySelector(".Result");
-// console.log(Result)
 const firstlineborder = document.querySelector('.firstlineborder')
 let array = [];
 array[0] = `<div class="imgOfpaper"><img class='images' src="./images/icon-paper.svg" alt="" /></div>`;
@@ -81,9 +79,7 @@ rock.addEventListener("click", () => {
     FaceGAme.classList.toggle("hide");
     PlaySection.classList.toggle("hide");
     randomImage.innerHTML = array[1];
-
     setTimeout(() => {
-
         randomValue();
         if (array[1] === array[random]) {
             Result.innerHTML = 'ITS A DRAW'
@@ -129,7 +125,6 @@ scissors.addEventListener("click", () => {
             localStorage.setItem('count', count);
             let mayank = `<div class='thirdBorder'><div class="secondBorder"><div class='firstline'><div class="imgOfSci"><img src="./images/icon-scissors.svg" alt="" /></div></div></div></div>`;
             randomImage.innerHTML = mayank;
-
         } else {
             Result.innerHTML = 'YOU LOSE'
             count--
@@ -137,13 +132,11 @@ scissors.addEventListener("click", () => {
             localStorage.setItem('count', count);
             let mayank = `<div class='thirdBorder'><div class="secondBorder"><div class='firstline'>${array[random]}</div></div></div>`;
             otherImgRandom.innerHTML = mayank;
-
         }
         playAgain.classList.remove('hide')
     }, 3000);
 
 });
-
 let arrayOrrandom = [];
 arrayOrrandom[0] = `<div class="imgOfpaper"><img src="./images/icon-paper.svg" alt="" /></div>`;
 arrayOrrandom[1] = `<div class="imgOfRo"><img src="./images/icon-rock.svg" alt="" /></div>`;
@@ -161,11 +154,10 @@ playAgain.addEventListener('click', () => {
     FaceGAme.classList.toggle("hide");
     PlaySection.classList.toggle("hide");
 })
-
 // to reset button
-setTimeout(() => {
-    resetLocalStorage.classList.toggle('hide')
-}, 5000);
+// setTimeout(() => {
+//     resetLocalStorage.classList.toggle('hide')
+// }, 5000);
 
 
 // if (condition1) {

@@ -258,30 +258,37 @@ body {
 }
 
 @keyframes mymove {
-  0% {top: 0px;} 
-  50% {top: -10px; background-color: rgb(19, 18, 18); border: 20px solid rgb(34, 32, 32); width: 150px;height: 150px;} /* Jump up by 50px at 50% of animation duration */
-  100% {top: 0px;} 
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -10px;
+    background-color: rgb(19, 18, 18);
+    border: 20px solid rgb(34, 32, 32);
+    width: 150px;
+    height: 150px;
+  } /* Jump up by 50px at 50% of animation duration */
+  100% {
+    top: 0px;
+  }
 }
 
-
-.hello{
+.hello {
   box-shadow: 0px 0px 0px 20px rgb(184, 171, 171);
   border-radius: 50%;
 }
-.firstline{
+.firstline {
   box-shadow: 0px 0px 0px 40px rgba(129, 125, 125, 0.103);
   border-radius: 50%;
   z-index: -1;
 }
-.secondBorder{
+.secondBorder {
   box-shadow: 0px 0px 0px 80px rgba(129, 125, 125, 0.075);
   border-radius: 50%;
   z-index: -1;
-
 }
-.thirdBorder{
+.thirdBorder {
   box-shadow: 0px 0px 0px 120px rgba(129, 125, 125, 0.096);
   border-radius: 50%;
   z-index: -1;
-
 }

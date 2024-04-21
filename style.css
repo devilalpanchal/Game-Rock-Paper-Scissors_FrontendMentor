@@ -20,26 +20,33 @@ body {
 /* to header */
 .header {
   display: flex;
-  gap: 55%;
+  gap: 50%;
   color: bisque;
   border: 2px solid hsl(217, 16%, 45%);
   margin-top: 50px;
   width: 50%;
   margin-left: 350px;
   border-radius: 10px;
-  padding: 10px;
+  padding: 14px;
+  height: 150px;
 }
 .Name {
-  margin-top: 6px;
+  margin-top: 10px;
+}
+.nameimagefile{
+  height: 105px;
 }
 .Score {
   border: 1px solid white;
   background-color: white;
   color: black;
-  width: 20%;
+  width: 30%;
   text-align: center;
-  padding-top: 13px;
+  padding-top: 25px;
   border-radius: 10px;
+}
+.scorename{
+  font-size: 30px;
 }
 .ScoreNumber {
   font-size: 35px;
@@ -50,6 +57,7 @@ body {
   width: 100%;
   height: 80%;
   margin-top: 50px;
+  margin-bottom: 150px;
 }
 .nameOfPicked {
   display: flex;

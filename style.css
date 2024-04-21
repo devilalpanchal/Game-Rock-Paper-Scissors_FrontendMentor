@@ -20,14 +20,14 @@ body {
 /* to header */
 .header {
   display: flex;
-  gap: 54%;
+  gap: 55%;
   color: bisque;
   border: 2px solid hsl(217, 16%, 45%);
-  margin-top: 30px;
+  margin-top: 50px;
   width: 50%;
   margin-left: 350px;
   border-radius: 10px;
-  padding: 15px;
+  padding: 10px;
 }
 .Name {
   margin-top: 6px;
@@ -44,10 +44,12 @@ body {
 .ScoreNumber {
   font-size: 35px;
 }
+
 /* mainGameZone */
 .mainGameZone {
   width: 100%;
-  height: 40%;
+  height: 80%;
+  margin-top: 50px;
 }
 .nameOfPicked {
   display: flex;
@@ -62,7 +64,7 @@ body {
 .FaceGAme {
   margin-left: 30px;
   text-align: center;
-  height: 330px;
+  height: 500px;
 }
 .imgOfmaingame {
   text-align: center;
@@ -81,31 +83,31 @@ body {
 }
 .imgOfpaper {
   text-align: center;
-  border: 15px solid hsl(230, 89%, 65%);
+  border: 23px solid hsl(230, 89%, 65%);
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  padding: 20px;
-  padding-top: 30px;
+  width: 190px;
+  height: 190px;
+  padding: 30px;
+  padding-top: 38px;
   background-color: #ffffff;
 }
 .imgOfRo {
   text-align: center;
-  border: 15px solid hsl(349, 70%, 56%);
+  border: 23px solid hsl(349, 70%, 56%);
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  padding: 20px;
+  width: 190px;
+  height: 190px;
+  padding: 30px;
   padding-top: 38px;
   background-color: #ffffff;
 }
 .imgOfSci {
   text-align: center;
-  border: 15px solid hsl(40, 84%, 53%);
+  border: 23px solid hsl(40, 84%, 53%);
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  padding: 20px;
+  width: 190px;
+  height: 190px;
+  padding: 30px;
   padding-top: 38px;
   background-color: #ffffff;
 }
@@ -140,48 +142,48 @@ body {
 .BackgroundTranigle {
   background-image: url(./images/bg-triangle.svg);
   background-repeat: no-repeat;
-  width: 70%;
-  height: 80%;
+  width: 100%;
+  height: 90%;
 }
 
 .imgOfpaperdiv {
   text-align: center;
-  border: 15px solid hsl(230, 89%, 65%);
+  border: 23px solid hsl(230, 89%, 65%);
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  padding: 20px;
-  padding-top: 30px;
+  width: 190px;
+  height: 190px;
+  padding: 30px;
+  padding-top: 38px;
   background-color: #ffffff;
   position: absolute;
-  left: 470px;
-  top: 220px;
+  left: 460px;
+  top: 270px;
 }
 .imgOfRock {
   text-align: center;
-  border: 15px solid hsl(349, 70%, 56%);
+  border: 23px solid hsl(349, 70%, 56%);
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  padding: 20px;
+  width: 190px;
+  height: 190px;
+  padding: 30px;
   padding-top: 38px;
   background-color: #ffffff;
   position: absolute;
-  left: 615px;
-  top: 440px;
+  left: 600px;
+  top: 490px;
 }
 .imgOfScissors {
   text-align: center;
-  border: 15px solid hsl(40, 84%, 53%);
+  border: 23px solid hsl(40, 84%, 53%);
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  padding: 20px;
+  width: 190px;
+  height: 190px;
+  padding: 30px;
   padding-top: 38px;
   background-color: #ffffff;
   position: absolute;
-  left: 750px;
-  top: 220px;
+  left: 740px;
+  top: 270px;
 }
 /* to coder name and Rules butoon*/
 .RuleAndCoder {
